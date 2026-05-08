@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIDOLA – Minggu Dolanan Lawas 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Bubblegum Sans (display) + Nunito (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       LOADING SCREEN – tampil saat pertama kali buka website
+  ============================================================ -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">🪀</div>
+      <div class="loader-text">MIDOLA</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <div class="loader-sub">Menyiapkan keseruan...</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FLOATING PARTICLES – background dekoratif mengambang
+  ============================================================ -->
+  <div id="particles-container"></div>
+
+  <!-- ============================================================
+       NAVBAR – transparan, berubah warna saat scroll
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">🏃</span>
+        <span class="logo-text">MIDOLA</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#permainan">Permainan</a></li>
+        <li><a href="#info">Info Acara</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <!-- Hamburger menu untuk mobile -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown menu -->
+    <ul class="nav-mobile" id="navMobile">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#permainan">Permainan</a></li>
+      <li><a href="#info">Info Acara</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION – full-screen dengan poster sebagai background
+  ============================================================ -->
+  <section id="hero">
+    <!-- Layer parallax background (poster acara) -->
+    <div class="hero-bg" id="heroBg"></div>
+    <!-- Overlay gradient agar teks terbaca -->
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <!-- Badge usia -->
+      <div class="hero-badge reveal">⚠️ Minimal 13 tahun</div>
+
+      <!-- Judul utama -->
+      <h1 class="hero-title reveal">
+        <span class="title-ayo">AYO MELU</span>
+        <span class="title-midola">MIDOLA</span>
+        <span class="title-exclaim">!!</span>
+      </h1>
+
+      <!-- Subjudul -->
+      <p class="hero-subtitle reveal">Minggu Dolanan Lawas</p>
+      <p class="hero-tagline reveal">Main Tradisional, Seru Tanpa Gawai! 🎯</p>
+
+      <!-- Tombol aksi -->
+      <div class="hero-buttons">
+        <a href="#info" class="btn btn-primary glow-btn">
+          <span>🎉 Daftar Sekarang</span>
+        </a>
+        <a href="https://maps.app.goo.gl/pCFScA5vFy2EQJoo9" target="_blank" class="btn btn-secondary">
+          <span>📍 Lihat Lokasi</span>
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator reveal">
+        <span>Scroll ke bawah</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COUNTDOWN TIMER – hitung mundur ke tanggal acara
+  ============================================================ -->
+  <section id="countdown">
+    <div class="countdown-inner">
+      <div class="countdown-label reveal">⏳ Acara dimulai dalam...</div>
+      <div class="countdown-grid reveal">
+        <div class="countdown-box">
+          <span id="cd-days">00</span>
+          <small>Hari</small>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-box">
+          <span id="cd-hours">00</span>
+          <small>Jam</small>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-box">
+          <span id="cd-minutes">00</span>
+          <small>Menit</small>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-box">
+          <span id="cd-seconds">00</span>
+          <small>Detik</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TENTANG ACARA – deskripsi MIDOLA
+  ============================================================ -->
+  <section id="tentang">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">🌟 Tentang Kami</div>
+        <h2 class="section-title">Apa Itu MIDOLA?</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Poster acara ditampilkan di kiri -->
+        <div class="about-poster reveal">
+          <img src="midola.jpeg" alt="Poster MIDOLA – Minggu Dolanan Lawas" />
+          <div class="poster-badge">FREE ✅</div>
+        </div>
+
+        <!-- Penjelasan di kanan -->
+        <div class="about-text reveal">
+          <p class="about-desc">
+            <strong>MIDOLA</strong> adalah singkatan dari <em>Minggu Dolanan Lawas</em> — sebuah kegiatan seru yang menghidupkan kembali permainan tradisional Indonesia yang hampir terlupakan!
+          </p>
+          <p class="about-desc">
+            Di era serba digital ini, anak-anak dan remaja diajak untuk <strong>meletakkan gawai sejenak</strong> dan merasakan kembali kegembiraan bermain bersama teman di lapangan terbuka.
+          </p>
+
+          <!-- Feature list -->
+          <ul class="about-features">
+            <li>
+              <span class="feat-icon">🎮</span>
+              <div>
+                <strong>Permainan Tradisional</strong>
+                <p>Lompat tali, jalepong, bentengan, dan banyak lagi!</p>
+              </div>
+            </li>
+            <li>
+              <span class="feat-icon">👥</span>
+              <div>
+                <strong>Terbuka untuk Semua</strong>
+                <p>Minimal usia 13 tahun, gratis tanpa biaya pendaftaran.</p>
+              </div>
+            </li>
+            <li>
+              <span class="feat-icon">🌱</span>
+              <div>
+                <strong>Mempererat Persahabatan</strong>
+                <p>Bangun keakraban nyata tanpa layar dan notifikasi.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RANGKAIAN PERMAINAN – card glassmorphism setiap permainan
+  ============================================================ -->
+  <section id="permainan">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">🎲 Agenda</div>
+        <h2 class="section-title">Rangkaian Permainan</h2>
+        <p class="section-sub">Tiga permainan seru yang menunggu kamu!</p>
+      </div>
+
+      <div class="games-grid">
+
+        <!-- Card 1: Lompat Tali Karet -->
+        <div class="game-card reveal" style="--card-color: #FF6B35; --card-bg: rgba(255,107,53,0.15);">
+          <div class="game-icon-wrap">
+            <span class="game-icon">🪢</span>
+          </div>
+          <h3 class="game-title">Lompat Tali Karet</h3>
+          <p class="game-desc">
+            Permainan legendaris yang melatih kelincahan dan kekompakan tim. Ayo tunjukkan lompatanmu yang paling tinggi!
+          </p>
+          <div class="game-tags">
+            <span class="tag">Kelincahan</span>
+            <span class="tag">Teamwork</span>
+          </div>
+          <div class="game-glow"></div>
+        </div>
+
+        <!-- Card 2: Jalepong -->
+        <div class="game-card reveal" style="--card-color: #FFD700; --card-bg: rgba(255,215,0,0.15);">
+          <div class="game-icon-wrap">
+            <span class="game-icon">🥿</span>
+          </div>
+          <h3 class="game-title">Jalepong</h3>
+          <p class="game-desc">
+            Dikenal juga sebagai Lempar Sandal! Uji ketepatan lemparanmu dan lihat siapa yang paling jago mengincar sasaran.
+          </p>
+          <div class="game-tags">
+            <span class="tag">Ketepatan</span>
+            <span class="tag">Konsentrasi</span>
+          </div>
+          <div class="game-glow"></div>
+        </div>
+
+        <!-- Card 3: Bentengan -->
+        <div class="game-card reveal" style="--card-color: #4ECDC4; --card-bg: rgba(78,205,196,0.15);">
+          <div class="game-icon-wrap">
+            <span class="game-icon">🏰</span>
+          </div>
+          <h3 class="game-title">Bentengan</h3>
+          <p class="game-desc">
+            Pertarungan strategi dan kecepatan antar tim! Rebut benteng lawan dan pertahankan bentengmu sendiri.
+          </p>
+          <div class="game-tags">
+            <span class="tag">Strategi</span>
+            <span class="tag">Kecepatan</span>
+          </div>
+          <div class="game-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INFO ACARA – detail waktu, lokasi, dan harga
+  ============================================================ -->
+  <section id="info">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">📋 Detail</div>
+        <h2 class="section-title">Informasi Acara</h2>
+      </div>
+
+      <div class="info-grid">
+
+        <!-- Kartu Lokasi -->
+        <div class="info-card reveal">
+          <div class="info-icon">📍</div>
+          <div class="info-label">Lokasi</div>
+          <div class="info-value">Lapangan Desa Kepatihan</div>
+          <a href="https://maps.app.goo.gl/pCFScA5vFy2EQJoo9" target="_blank" class="info-link">Buka di Maps →</a>
+        </div>
+
+        <!-- Kartu Tanggal -->
+        <div class="info-card reveal">
+          <div class="info-icon">📅</div>
+          <div class="info-label">Tanggal</div>
+          <div class="info-value">10 Mei 2026</div>
+          <div class="info-note">Minggu</div>
+        </div>
+
+        <!-- Kartu Waktu -->
+        <div class="info-card reveal">
+          <div class="info-icon">⏰</div>
+          <div class="info-label">Waktu Acara</div>
+          <div class="info-value">06.30 WIB</div>
+          <div class="info-note">Open Gate: 06.00 – 06.30 WIB</div>
+        </div>
+
+        <!-- Kartu Gratis -->
+        <div class="info-card info-free reveal">
+          <div class="info-icon">🎁</div>
+          <div class="info-label">Biaya</div>
+          <div class="info-value free-text">G R A T I S</div>
+          <div class="info-note">FREE untuk semua peserta!</div>
+        </div>
+
+      </div>
+
+      <!-- CTA daftar -->
+      <div class="cta-box reveal">
+        <h3>Siap ikutan? Yuk daftar sekarang!</h3>
+        <p>Tempat terbatas – pastikan kamu sudah berusia minimal 13 tahun.</p>
+        <a href="https://wa.me/6281326114308" target="_blank" class="btn btn-primary glow-btn big-btn">
+          💬 Hubungi Panitia via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALERI – foto-foto permainan tradisional (placeholder emoji art)
+  ============================================================ -->
+  <section id="galeri">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">📸 Galeri</div>
+        <h2 class="section-title">Momen Dolanan</h2>
+        <p class="section-sub">Kenangan seru permainan tradisional Indonesia</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal gi-big" style="--g-hue: 120;">
+          <div class="gallery-art">🪢</div>
+          <div class="gallery-caption">Lompat Tali Karet</div>
+        </div>
+        <div class="gallery-item reveal" style="--g-hue: 200;">
+          <div class="gallery-art">🥿</div>
+          <div class="gallery-caption">Jalepong</div>
+        </div>
+        <div class="gallery-item reveal" style="--g-hue: 45;">
+          <div class="gallery-art">🏰</div>
+          <div class="gallery-caption">Bentengan</div>
+        </div>
+        <div class="gallery-item reveal" style="--g-hue: 280;">
+          <div class="gallery-art">🎯</div>
+          <div class="gallery-caption">Ketepatan & Fokus</div>
+        </div>
+        <div class="gallery-item reveal gi-big" style="--g-hue: 350;">
+          <div class="gallery-art">👫</div>
+          <div class="gallery-caption">Kebersamaan</div>
+        </div>
+        <div class="gallery-item reveal" style="--g-hue: 170;">
+          <div class="gallery-art">🌳</div>
+          <div class="gallery-caption">Di Alam Terbuka</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER – sosial media, kontak, dan copyright
+  ============================================================ -->
+  <footer id="kontak">
+    <div class="footer-waves">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--green-dark)"/></svg>
+    </div>
+
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">🏃 MIDOLA</div>
+        <p>Minggu Dolanan Lawas — Hidupkan Kembali Permainan Tradisional Indonesia</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Tautan Cepat</h4>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#permainan">Permainan</a></li>
+          <li><a href="#info">Info Acara</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Ikuti Kami</h4>
+        <div class="social-icons">
+        <a href="https://www.instagram.com/konco.midola?igsh=MTN2ZG1yMGNicWw5cw==" target="_blank" class="social-btn">
+  📸 Instagram
+</a>
+          <a href="https://wa.me/6281326114308" class="social-btn" aria-label="WhatsApp">💬 WhatsApp</a>
+        </div>
+        <div class="footer-contact">
+          <p>📞 +62 813-2611-4308</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 MIDOLA – Minggu Dolanan Lawas. Dibuat dengan ❤️ untuk anak-anak Indonesia.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="backToTop" aria-label="Kembali ke atas">⬆</button>
+
+  <!-- Script utama -->
+  <script src="script.js"></script>
+</body>
+</html>
