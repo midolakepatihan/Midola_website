@@ -105,7 +105,7 @@ window.addEventListener("scroll", revealOnScroll);
 ============================================================ */
 
 // Tanggal acara
-const eventDate = new Date("May 10, 2026 06:30:00").getTime();
+const eventDate = new Date("May 31, 2026 15:30:00").getTime();
 
 const daysEl = document.getElementById("cd-days");
 const hoursEl = document.getElementById("cd-hours");
